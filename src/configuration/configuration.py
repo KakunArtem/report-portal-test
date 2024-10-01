@@ -1,6 +1,5 @@
 import logging
 from logging.config import dictConfig
-from pathlib import Path
 
 from dotenv import find_dotenv, load_dotenv
 from pydantic import BaseModel, BaseSettings
@@ -14,9 +13,7 @@ class Config(BaseSettings):
 
     LOG_LEVEL: str = "INFO"
     BASE_URL: str
-
-
-    PROJECT_ROOT: Path = Path(__file__).absolute().parent.parent
+    DASHBOARD_URL: str
 
     class Config:
         env_file = find_dotenv(".env", raise_error_if_not_found=True)
