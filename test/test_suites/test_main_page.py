@@ -33,3 +33,4 @@ class TestMainPage:
          .fill_contact_form(contact_object))
 
         assert ContactUsPage(page).is_thank_you_modal_displayed() is True
+
